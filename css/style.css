@@ -1,3 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 * {
   box-sizing: border-box;
+}
+
+body {
+  background: rgb(58, 70, 99);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px 0;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.53px;
+}
+
+.themes {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 23px;
+}
+
+.themes h4 {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 1px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.themeNums {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 11px;
+  margin-bottom: 3px;
+  color: rgb(255, 255, 255);
+  font-family: "League Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+}
+
+.Themeinputs {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  border-radius: 15px;
+  background: rgb(36, 45, 68);
+  padding: 5px;
+}
+
+.Themeinputs input {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+#themeOne {
+  background: rgb(208, 63, 47);
+}
+
+#themeTwo {
+  background: rgb(200, 84, 2);
+  opacity: 0;
+}
+
+#themeThree {
+  background: rgb(0, 222, 208);
+  opacity: 0;
+}
+
+main {
+  max-width: 327px;
+  margin: 32px auto 0 auto;
+}
+
+.displaySection {
+  border-radius: 10px;
+  background: rgb(24, 31, 51);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px 24px;
+}
+
+.topNumber {
+  color: rgb(207, 207, 207);
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: -0.67px;
+}
+
+.bottomNumber {
+  color: rgb(255, 255, 255);
+  font-family: "League Spartan", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: -0.67px;
+  margin-top: 5px;
+}
+
+.calculatorBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgb(36, 45, 68);
+  margin: 24px auto 50px auto;
+  padding: 24px;
+}
+
+.calculatorBtns > button {
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 0px 0px rgb(179, 164, 151);
+  background: rgb(234, 227, 220);
+  border: none;
+  height: 64px;
+  width: 60px;
+  color: rgb(67, 74, 89);
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.53px;
+}
+
+.delBtn {
+  box-shadow: inset 0px -4px 0px 0px rgb(65, 78, 115) !important;
+  background: rgb(100, 113, 152) !important;
+  color: rgb(255, 255, 255) !important;
+  transition: 0.3s ease;
+}
+
+.reset-EqualityBtns {
+  display: flex;
+  align-items: center;
+  row-gap: 13px;
+}
+
+.reset-EqualityBtns {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  column-gap: 13px;
+}
+
+.reset-EqualityBtns button {
+  border-radius: 5px;
+  width: 133px;
+  max-width: 133px;
+  height: 64px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.33px;
+  text-align: center;
+}
+
+.reset {
+  box-shadow: inset 0px -4px 0px 0px rgb(65, 78, 115);
+  background: rgb(100, 113, 152);
+}
+
+.equality {
+  box-shadow: inset 0px -4px 0px 0px rgb(147, 38, 26);
+  background: rgb(208, 63, 47);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    max-width: 533px;
+  }
+
+  .themeBtns {
+    width: 71px;
+  }
+
+  main {
+    max-width: 540px;
+  }
+
+  .calculatorBtns {
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .calculatorBtns > button {
+    width: 101px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  .reset-EqualityBtns button {
+    width: 227px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .numBtns:hover,
+  .funcBtn:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(179, 164, 151);
+    background: rgb(255, 255, 254);
+  }
+
+  .delBtn:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(65, 78, 115) !important;
+    background: rgb(162, 178, 225) !important;
+  }
+
+  .reset-EqualityBtns .reset:hover {
+    background: rgb(162, 178, 225);
+  }
+
+  .reset-EqualityBtns .equality:hover {
+    background: rgb(249, 107, 91);
+  }
+
+  .Themeinputs input {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .calculatorBtns {
+    gap: 11px;
+  }
+
+  .calculatorBtns > button {
+    width: 53px;
+    font-size: 24px;
+  }
 }
