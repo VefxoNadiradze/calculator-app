@@ -21,9 +21,15 @@
           </div>
 
           <div class="Themeinputs">
-            <input type="radio" id="themeOne" value="1" />
-            <input type="radio" id="themeTwo" value="2" />
-            <input type="radio" id="themeThree" value="3" />
+            <input
+              type="checkbox"
+              checked
+              class="themeBtn active"
+              id="themeOne"
+              value="1"
+            />
+            <input type="checkbox" class="themeBtn" id="themeTwo" value="2" />
+            <input type="checkbox" class="themeBtn" id="themeThree" value="3" />
           </div>
         </div>
       </div>
@@ -36,22 +42,22 @@
       </section>
 
       <div class="calculatorBtns">
-        <button class="numBtns">7</button>
-        <button class="numBtns">8</button>
-        <button class="numBtns">9</button>
-        <button class="funcBtn delBtn">DEL</button>
-        <button class="numBtns">4</button>
-        <button class="numBtns">5</button>
-        <button class="numBtns">6</button>
-        <button class="funcBtn">+</button>
-        <button class="numBtns">1</button>
-        <button class="numBtns">2</button>
-        <button class="numBtns">3</button>
-        <button class="funcBtn">-</button>
-        <button class="funcBtn">.</button>
-        <button class="numBtns">0</button>
-        <button class="funcBtn">/</button>
-        <button class="funcBtn">x</button>
+        <button class="numBtns num-functBtns">7</button>
+        <button class="numBtns num-functBtns">8</button>
+        <button class="numBtns num-functBtns">9</button>
+        <button class="delBtn">DEL</button>
+        <button class="numBtns num-functBtns">4</button>
+        <button class="numBtns num-functBtns">5</button>
+        <button class="numBtns num-functBtns">6</button>
+        <button class="funcBtn num-functBtns">+</button>
+        <button class="numBtns num-functBtns">1</button>
+        <button class="numBtns num-functBtns">2</button>
+        <button class="numBtns num-functBtns">3</button>
+        <button class="funcBtn num-functBtns">-</button>
+        <button class="funcBtn num-functBtns">.</button>
+        <button class="numBtns num-functBtns">0</button>
+        <button class="funcBtn num-functBtns">/</button>
+        <button class="funcBtn num-functBtns">x</button>
 
         <div class="reset-EqualityBtns">
           <button class="reset">RESET</button>
@@ -59,5 +65,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>

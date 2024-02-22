@@ -6,6 +6,7 @@
 body {
   background: rgb(58, 70, 99);
   min-height: 100vh;
+  transition: 0.3s ease;
 }
 
 header {
@@ -74,6 +75,7 @@ header {
 
 #themeOne {
   background: rgb(208, 63, 47);
+  opacity: 0;
 }
 
 #themeTwo {
@@ -84,6 +86,10 @@ header {
 #themeThree {
   background: rgb(0, 222, 208);
   opacity: 0;
+}
+
+.active {
+  opacity: 1 !important;
 }
 
 main {
@@ -190,6 +196,112 @@ main {
   background: rgb(208, 63, 47);
 }
 
+/* theme two */
+.bodyThemeTwo {
+  background: rgb(230, 230, 230);
+}
+.bodyThemeTwo .logo {
+  color: rgb(54, 54, 44);
+}
+
+.bodyThemeTwo .Themeinputs {
+  background: rgb(210, 205, 205);
+}
+
+.bodyThemeTwo .themeNums {
+  color: rgb(54, 54, 44);
+}
+
+.bodyThemeTwo .themes h4 {
+  color: rgb(54, 54, 44);
+}
+
+.bodyThemeTwo .displaySection {
+  background: rgb(238, 238, 238);
+}
+
+.bodyThemeTwo .displaySection div {
+  color: rgb(54, 54, 44);
+}
+
+.bodyThemeTwo .calculatorBtns {
+  background: rgb(210, 205, 205);
+}
+
+.bodyThemeTwo .calculatorBtns > button {
+  box-shadow: inset 0px -4px 0px 0px rgb(167, 158, 145);
+  background: rgb(229, 228, 225);
+}
+
+.bodyThemeTwo .delBtn {
+  box-shadow: inset 0px -4px 0px 0px rgb(27, 96, 102) !important;
+  background: rgb(55, 129, 135) !important;
+}
+
+.bodyThemeTwo .reset {
+  box-shadow: inset 0px -4px 0px 0px rgb(27, 96, 102);
+  background: rgb(55, 129, 135);
+}
+
+.bodyThemeTwo .equality {
+  box-shadow: inset 0px -4px 0px 0px rgb(135, 57, 1);
+  background: rgb(200, 84, 2);
+}
+
+/* theme three */
+.bodyThemeThree {
+  background: rgb(23, 6, 42);
+}
+.bodyThemeThree .logo {
+  color: rgb(255, 229, 61);
+}
+
+.bodyThemeThree .Themeinputs {
+  background: rgb(30, 9, 54);
+}
+
+.bodyThemeThree .themeNums {
+  color: rgb(255, 229, 61);
+}
+
+.bodyThemeThree .themes h4 {
+  color: rgb(255, 229, 61);
+}
+
+.bodyThemeThree .displaySection {
+  background: rgb(30, 9, 54);
+}
+
+.bodyThemeThree .displaySection div {
+  color: rgb(255, 229, 61);
+}
+
+.bodyThemeThree .calculatorBtns {
+  background: rgb(30, 9, 54);
+}
+
+.bodyThemeThree .calculatorBtns > button {
+  color: rgb(255, 229, 61);
+  box-shadow: inset 0px -4px 0px 0px rgb(136, 28, 158);
+  background: rgb(51, 28, 77);
+}
+
+.bodyThemeThree .delBtn {
+  box-shadow: inset 0px -4px 0px 0px rgb(190, 21, 244) !important;
+  background: rgb(86, 7, 124) !important;
+}
+
+.bodyThemeThree .reset {
+  box-shadow: inset 0px -4px 0px 0px rgb(190, 21, 244);
+  background: rgb(86, 7, 124);
+}
+
+.bodyThemeThree .equality {
+  box-shadow: inset 0px -4px 0px 0px rgb(108, 249, 241);
+  background: rgb(0, 222, 208);
+  color: rgb(26, 35, 39);
+}
+
 @media screen and (min-width: 768px) {
   header {
     max-width: 533px;
@@ -216,14 +328,14 @@ main {
 
   .reset-EqualityBtns button {
     width: 227px;
+    max-width: 227px;
     cursor: pointer;
     transition: 0.3s ease;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .numBtns:hover,
-  .funcBtn:hover {
+  .num-functBtns:hover {
     box-shadow: inset 0px -4px 0px 0px rgb(179, 164, 151);
     background: rgb(255, 255, 254);
   }
@@ -243,6 +355,41 @@ main {
 
   .Themeinputs input {
     cursor: pointer;
+  }
+
+  .bodyThemeTwo .num-functBtns:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(167, 158, 145);
+    background: rgb(255, 255, 255);
+  }
+
+  .bodyThemeTwo .delBtn:hover {
+    background: #62b5bc !important;
+  }
+
+  .bodyThemeTwo .reset:hover {
+    background: #62b5bc;
+  }
+  .bodyThemeTwo .equality:hover {
+    background-color: #ff8a38;
+  }
+
+  .bodyThemeThree .num-functBtns:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(136, 28, 158);
+    background: rgb(108, 52, 172);
+  }
+
+  .bodyThemeThree .delBtn:hover {
+    background: #8631af !important;
+    box-shadow: inset 0px -4px 0px 0px #be15f4 !important;
+  }
+
+  .bodyThemeThree .reset:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(190, 21, 244);
+    background: rgb(134, 49, 175);
+  }
+  .bodyThemeThree .equality:hover {
+    background-color: #93fff8;
+    box-shadow: inset 0px -4px 0px 0px #6cf9f1;
   }
 }
 
