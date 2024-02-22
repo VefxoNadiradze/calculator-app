@@ -1,8 +1,8 @@
 let themeBtns = Array.from(document.querySelectorAll(".themeBtn"));
-let numbers = Array.from(document.querySelectorAll(".numBtns"));
 let numFunctBtns = Array.from(document.querySelectorAll(".num-functBtns"));
-let deleteBtn = document.querySelector(".delBtn");
+let result = document.querySelector(".result");
 
+// theme function
 themeBtns.forEach((themeBtn) => {
   themeBtn.addEventListener("click", () => {
     if (themeBtn.value === "1") {
@@ -33,6 +33,39 @@ themeBtns.forEach((themeBtn) => {
       /////////
       document.body.classList.remove("bodyThemeTwo");
       document.body.classList.add("bodyThemeThree");
+    }
+  });
+});
+
+let currentValue = "";
+// calculate function
+numFunctBtns.forEach((btnItems) => {
+  btnItems.addEventListener("click", (e) => {
+    switch (e.target.innerText) {
+      case "RESET":
+        currentValue = "";
+        result.innerHTML = "0";
+        break;
+
+      case "DEL":
+        result.innerHTML = result.innerHTML.slice(0, -1);
+        if (result.innerHTML.length < 1) {
+          currentValue = "";
+          result.innerHTML = "0";
+        }
+        break;
+      case "=":
+        try {
+          result.innerHTML = eval(result.innerHTML);
+        } catch (error) {
+          error = "Error";
+          result.innerHTML = error;
+        }
+        break;
+
+      default:
+        currentValue += e.target.innerText;
+        result.innerHTML = currentValue;
     }
   });
 });
