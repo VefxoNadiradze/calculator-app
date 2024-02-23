@@ -104,7 +104,6 @@ equality.addEventListener("click", () => {
       res = prevNum / currNum;
       break;
 
-    // Add cases for other operators as needed
   }
 
   result.textContent = res;
