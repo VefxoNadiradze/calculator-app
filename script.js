@@ -1,6 +1,4 @@
 let themeBtns = Array.from(document.querySelectorAll(".themeBtn"));
-let numFunctBtns = Array.from(document.querySelectorAll(".num-functBtns"));
-let result = document.querySelector(".result");
 
 // theme function
 themeBtns.forEach((themeBtn) => {
@@ -37,35 +35,79 @@ themeBtns.forEach((themeBtn) => {
   });
 });
 
-let currentValue = "";
-// calculate function
-numFunctBtns.forEach((btnItems) => {
-  btnItems.addEventListener("click", (e) => {
-    switch (e.target.innerText) {
-      case "RESET":
-        currentValue = "";
-        result.innerHTML = "0";
-        break;
+const numBtns = Array.from(document.querySelectorAll(".numBtns"));
+const result = document.querySelector(".result");
+const funcBtns = Array.from(document.querySelectorAll(".funcBtn"));
+const equality = document.querySelector(".equality");
+const operatorDiv = document.querySelector(".operatorDiv");
+const deleteBtn = document.querySelector(".delBtn");
+const resetBtn = document.querySelector(".reset");
 
-      case "DEL":
-        result.innerHTML = result.innerHTML.slice(0, -1);
-        if (result.innerHTML.length < 1) {
-          currentValue = "";
-          result.innerHTML = "0";
-        }
-        break;
-      case "=":
-        try {
-          result.innerHTML = eval(result.innerHTML);
-        } catch (error) {
-          error = "Error";
-          result.innerHTML = error;
-        }
-        break;
+let currentNumb = "";
+let prevNumb = "";
+let res = 0;
 
-      default:
-        currentValue += e.target.innerText;
-        result.innerHTML = currentValue;
-    }
+result.textContent = 0;
+
+numBtns.forEach((numBtn) => {
+  numBtn.addEventListener("click", () => {
+    currentNumb += numBtn.textContent;
+    result.textContent = currentNumb;
   });
+});
+
+funcBtns.forEach((funcBtn) => {
+  funcBtn.addEventListener("click", () => {
+    if (currentNumb !== "") {
+      prevNumb = currentNumb;
+      currentNumb = "";
+    }
+    operatorDiv.textContent = funcBtn.textContent;
+  });
+});
+
+deleteBtn.addEventListener("click", () => {
+  result.textContent = result.innerHTML.slice(0, -1);
+
+  if (result.innerHTML.length < 1) {
+    result.textContent = 0;
+    currentNumb = "";
+    operatorDiv.textContent = "";
+  }
+});
+
+resetBtn.addEventListener("click", () => {
+  result.textContent = 0;
+  currentNumb = "";
+  operatorDiv.textContent = "";
+});
+
+equality.addEventListener("click", () => {
+  let prevNum = Number(prevNumb);
+  let currNum = Number(currentNumb);
+
+  switch (operatorDiv.textContent) {
+    case "+":
+      res = prevNum + currNum;
+      break;
+    case "-":
+      res = prevNum - currNum;
+      break;
+    case "X":
+      res = prevNum * currNum;
+      break;
+
+    case "/":
+      if (!currNum) {
+        result.textContent = "Error";
+      }
+      res = prevNum / currNum;
+      break;
+
+    // Add cases for other operators as needed
+  }
+
+  result.textContent = res;
+  console.log(operatorDiv.textContent);
+  currentNumb = res;
 });
